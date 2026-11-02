@@ -1,0 +1,61 @@
+{
+  "question": "登录密码忘记了怎么重置？",
+  "review_status": "answered",
+  "topic": "密码重置",
+  "answer": "可在登录页点击忘记密码，通过绑定邮箱重置登录密码。",
+  "citations": [
+    {
+      "doc_id": "D04",
+      "fragment_id": "D04-F1",
+      "version_date": "2025-08-15",
+      "original_text": "可在登录页点击忘记密码，通过绑定邮箱重置登录密码。"
+    },
+    {
+      "doc_id": "D04",
+      "fragment_id": "D04-F2",
+      "version_date": "2025-08-15",
+      "original_text": "密码重置为系统自助操作，无需管理员审批。"
+    }
+  ],
+  "conflict_items": [],
+  "information_gap": "",
+  "steps_used": 4,
+  "llm_name": "MockLLM",
+  "trace": [
+    {
+      "step": 1,
+      "action": "document_search",
+      "tool_arguments": {
+        "query": "登录密码忘记了怎么重置？",
+        "context_topic": null
+      },
+      "observation_summary": "document_search 命中 2 个候选，文档：['D04']",
+      "decision_rationale": "先检索与问题相关的文档片段"
+    },
+    {
+      "step": 2,
+      "action": "fragment_reader",
+      "tool_arguments": {
+        "fragment_id": "D04-F1"
+      },
+      "observation_summary": "fragment_reader 读取原文：可在登录页点击忘记密码，通过绑定邮箱重置登录密码。",
+      "decision_rationale": "读取 D04 的原文片段，核对原文是否支持回答"
+    },
+    {
+      "step": 3,
+      "action": "fragment_reader",
+      "tool_arguments": {
+        "fragment_id": "D04-F2"
+      },
+      "observation_summary": "fragment_reader 读取原文：密码重置为系统自助操作，无需管理员审批。",
+      "decision_rationale": "读取 D04 的原文片段，核对原文是否支持回答"
+    },
+    {
+      "step": 4,
+      "action": "answer",
+      "tool_arguments": {},
+      "observation_summary": "终结动作：引用原文可支持回答，给出带文档 ID 与原文片段的答案",
+      "decision_rationale": "引用原文可支持回答，给出带文档 ID 与原文片段的答案"
+    }
+  ]
+}

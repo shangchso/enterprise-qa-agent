@@ -1,0 +1,40 @@
+{
+  "questions": [
+    {
+      "question_id": "Q1",
+      "scenario": "明确答案",
+      "question": "员工年假有几天？",
+      "follow_up": null
+    },
+    {
+      "question_id": "Q2",
+      "scenario": "文档冲突",
+      "question": "报销期限是多久？",
+      "follow_up": null
+    },
+    {
+      "question_id": "Q3",
+      "scenario": "资料外问题",
+      "question": "公司食堂午饭多少钱？",
+      "follow_up": null
+    },
+    {
+      "question_id": "Q4",
+      "scenario": "改写后的相似问题",
+      "question": "出差住一晚最多能报多少钱？",
+      "follow_up": null
+    },
+    {
+      "question_id": "Q5",
+      "scenario": "上下文追问",
+      "question": "登录密码忘记了怎么重置？",
+      "follow_up": "这个操作需要管理员审批吗？"
+    },
+    {
+      "question_id": "Q6",
+      "scenario": "工具失败",
+      "question": "报销期限是多久？",
+      "follow_up": null
+    }
+  ]
+}

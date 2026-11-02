@@ -1,0 +1,32 @@
+{
+  "question": "公司食堂午饭多少钱？",
+  "review_status": "out_of_scope",
+  "topic": null,
+  "answer": "",
+  "citations": [],
+  "conflict_items": [],
+  "information_gap": "现有文档库未检索到与该问题相关的资料",
+  "steps_used": 2,
+  "llm_name": "MockLLM",
+  "trace": [
+    {
+      "step": 1,
+      "action": "document_search",
+      "tool_arguments": {
+        "query": "公司食堂午饭多少钱？",
+        "context_topic": null
+      },
+      "observation_summary": "document_search 命中 0 个候选，文档：[]",
+      "decision_rationale": "先检索与问题相关的文档片段"
+    },
+    {
+      "step": 2,
+      "action": "gap",
+      "tool_arguments": {
+        "reason": "现有文档库未检索到与该问题相关的资料"
+      },
+      "observation_summary": "终结动作：资料覆盖范围外，返回资料缺口而非凭空回答",
+      "decision_rationale": "资料覆盖范围外，返回资料缺口而非凭空回答"
+    }
+  ]
+}

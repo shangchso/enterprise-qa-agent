@@ -1,0 +1,46 @@
+{
+  "question": "这个操作需要管理员审批吗？",
+  "review_status": "answered",
+  "topic": "密码重置审批",
+  "answer": "密码重置为系统自助操作，无需管理员审批。",
+  "citations": [
+    {
+      "doc_id": "D04",
+      "fragment_id": "D04-F2",
+      "version_date": "2025-08-15",
+      "original_text": "密码重置为系统自助操作，无需管理员审批。"
+    }
+  ],
+  "conflict_items": [],
+  "information_gap": "",
+  "steps_used": 3,
+  "llm_name": "MockLLM",
+  "trace": [
+    {
+      "step": 1,
+      "action": "document_search",
+      "tool_arguments": {
+        "query": "这个操作需要管理员审批吗？",
+        "context_topic": "密码重置"
+      },
+      "observation_summary": "document_search 命中 1 个候选，文档：['D04']",
+      "decision_rationale": "先检索与问题相关的文档片段"
+    },
+    {
+      "step": 2,
+      "action": "fragment_reader",
+      "tool_arguments": {
+        "fragment_id": "D04-F2"
+      },
+      "observation_summary": "fragment_reader 读取原文：密码重置为系统自助操作，无需管理员审批。",
+      "decision_rationale": "读取 D04 的原文片段，核对原文是否支持回答"
+    },
+    {
+      "step": 3,
+      "action": "answer",
+      "tool_arguments": {},
+      "observation_summary": "终结动作：引用原文可支持回答，给出带文档 ID 与原文片段的答案",
+      "decision_rationale": "引用原文可支持回答，给出带文档 ID 与原文片段的答案"
+    }
+  ]
+}

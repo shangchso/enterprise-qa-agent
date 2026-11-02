@@ -1,0 +1,32 @@
+{
+  "question": "报销期限是多久？",
+  "review_status": "blocked",
+  "topic": null,
+  "answer": "",
+  "citations": [],
+  "conflict_items": [],
+  "information_gap": "工具失败：文档检索服务执行失败",
+  "steps_used": 2,
+  "llm_name": "MockLLM",
+  "trace": [
+    {
+      "step": 1,
+      "action": "document_search",
+      "tool_arguments": {
+        "query": "报销期限是多久？",
+        "context_topic": null
+      },
+      "observation_summary": "document_search 返回失败：文档检索服务执行失败",
+      "decision_rationale": "先检索与问题相关的文档片段"
+    },
+    {
+      "step": 2,
+      "action": "block",
+      "tool_arguments": {
+        "reason": "工具失败：文档检索服务执行失败"
+      },
+      "observation_summary": "终结动作：检索或读取工具失败，如实返回，不编造答案",
+      "decision_rationale": "检索或读取工具失败，如实返回，不编造答案"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "question": "员工年假有几天？",
+  "review_status": "answered",
+  "topic": "年假",
+  "answer": "员工入职满一年后享有 5 天带薪年假。",
+  "citations": [
+    {
+      "doc_id": "D03",
+      "fragment_id": "D03-F1",
+      "version_date": "2025-03-01",
+      "original_text": "员工入职满一年后享有 5 天带薪年假。"
+    }
+  ],
+  "conflict_items": [],
+  "information_gap": "",
+  "steps_used": 3,
+  "llm_name": "MockLLM",
+  "trace": [
+    {
+      "step": 1,
+      "action": "document_search",
+      "tool_arguments": {
+        "query": "员工年假有几天？",
+        "context_topic": null
+      },
+      "observation_summary": "document_search 命中 1 个候选，文档：['D03']",
+      "decision_rationale": "先检索与问题相关的文档片段"
+    },
+    {
+      "step": 2,
+      "action": "fragment_reader",
+      "tool_arguments": {
+        "fragment_id": "D03-F1"
+      },
+      "observation_summary": "fragment_reader 读取原文：员工入职满一年后享有 5 天带薪年假。",
+      "decision_rationale": "读取 D03 的原文片段，核对原文是否支持回答"
+    },
+    {
+      "step": 3,
+      "action": "answer",
+      "tool_arguments": {},
+      "observation_summary": "终结动作：引用原文可支持回答，给出带文档 ID 与原文片段的答案",
+      "decision_rationale": "引用原文可支持回答，给出带文档 ID 与原文片段的答案"
+    }
+  ]
+}
